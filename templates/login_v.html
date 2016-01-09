@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <title>Welcome | Sistem Akademik UMS</title>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            
+            {% include 'navbar.html' %}
+
+            <section class="hero">
+                <div class="container text-center">
+                    <h2 class="hero-title">Selamat datang</h2>
+                    <p class="hero-description hidden-xs">Anda berada di halaman login pada aplikasi Sistem Informasi Akademik Universitas Muhammadiyah Surakarta. </p>
+                    <div class="row hero-search-box">
+                        <form>
+                            <div class="col-md-4 col-sm-4 search-input">
+                                <input type="text" class="form-control input-lg search-first" placeholder="Kata Kunci...">
+                            </div>
+                            <div class="col-md-4 col-sm-4 search-input">
+                                <select class="form-control input-lg search-second">
+                                    <option selected="">Jurusan</option>
+                                    <option>Informatika</option>
+                                    <option>Komunikasi</option>
+                                    <option>Teknik Mesin</option>
+                                    <option>Teknik Sipil</option>
+                                    <option>Arsitek</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4 search-input">
+                                <button class="btn btn-custom btn-block btn-lg"><i class="fa fa-search"></i> Cari Jadwal</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <div class="row">
+                                <div class="widget">
+                                    <div class="widget-header">
+                                        <!--<h3>Selamat Datang</h3>-->
+                                        <ul class="nav nav-tabs">
+                                          <li class="active"><a href="#tab_a" data-toggle="tab"><h3>Selamat Datang</h3></a></li>
+                                          <li><a href="#tab_b" data-toggle="tab"><h3>Welcome</h3></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="widget-body" style="text-align:justify">
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="tab_a">
+                                                <p>Anda sekarang berada di halaman muka aplikasi Sistem Informasi Akademik Universitas Muhammadiyah Surakarta (UMS).
+                                                Aplikasi ini merupakan bagian dari sistem informasi terpadu UMS, digunakan secara tidak terpisahkan dengan ADUMS,
+                                                aplikasi pencatatan jurnal kuliah, dan beberapa terkait sistem keuangan. Secara umum aplikasi ini dirancang untuk
+                                                memfasilitasi aktivitas penyusunan atau pengaksesan sistem administrasi dan informasi akademik, mencakup: penyusunan
+                                                dan akses jadwal perkuliahan, penyusunan dan akses SK Akademik Dosen, akses hasil pengambilan rencana studi (KRS),
+                                                akses jadwal ujian, pencetakan Kartu Ujian mandiri, dan akses hasil studi (KHS, Transkrip). Segenap sivitas akademika
+                                                UMS (dosen, mahasiswa, program studi/fakultas, dan unit terkait) dapat mengakses aplikasi ini dengan menu akses sesuai
+                                                fungsi atau kapasitas masing-masing, menggunakan sistem log in tertentu melalui internet maupun jaringan di dalam kampus
+                                                UMS.</p>
+                                            </div>
+                                            <div class="tab-pane" id="tab_b">
+                                                <p>
+                                                    <i>You are now at the home page of application of Academic Information System of Universitas Muhammadiyah Surakarta (UMS).
+                                                    This application is a part of integrated information system of UMS, used indistinguishably from ADUMS, application of
+                                                    lecture journal record, and some relate to financial system. In general this application is designed to facilitate
+                                                    activities dealing with the arrangement or access of academic administration system and information, including: arrangement
+                                                    and access of lecture schedules, arrangement and access of Academic Decrees, access of study plan (KRS), access of exam
+                                                    schedules, autonomous exam card printing, and access of academic achievements (KHS, Transcript). All parties (lecturer,
+                                                    student, study program/faculty, and relevant units) are able to access this application with different contents depending
+                                                    on their functions or capacities, using secret log in system through internet or local campus network.
+                                                    </i>
+                                                </p>
+                                            </div>
+                                        </div><!-- tab content -->
+
+                                    </div>
+                                    <div class="widget-footer">
+                                        Footer
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-header">
+                                        <h2>Informasi</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="widget">
+                                <div class="widget-header" style="border-bottom: 1px solid #E7E7E7; margin-top:11px; margin-bottom:6px;">
+                                    <h3>Fakultas</h3>
+                                </div>
+                                <div class="widget-body">
+                                    <ul class="trends">
+                                        <li><a href="#">Keguruan dan Ilmu Pendidikan&nbsp;<span class="item-numbers">(2,342)</span></a></li>
+                                        <li><a href="#">Ekonomi dan Bisnis&amp; Jewelry &nbsp;<span class="item-numbers">(2,342)</span></a></li>
+                                        <li><a href="#">Teknik &nbsp;<span class="item-numbers">(2,342)</span></a></li>
+                                        <li><a href="#">Hukum &nbsp;<span class="item-numbers">(2,342)</span></a></li>
+                                        <li><a href="#">Geografi &nbsp;<span class="item-numbers">(2,342)</span></a></li>
+                                        <li><a href="#">Psikologi &nbsp;<span class="item-numbers">(2,342)</span></a></li>
+                                        <li><a href="#">Agama Islam &nbsp;<span class="item-numbers">(242)</span></a></li>
+                                        <li><a href="#">Kedokteran &nbsp;<span class="item-numbers">(2,342)</span></a></li>
+                                        <li><a href="#">Kedokteran Gigi &nbsp;<span class="item-numbers">(2,342)</span></a></li>
+                                        <li><a href="#">Ilmu Kesehatan &nbsp;<span class="item-numbers">(2,342)</span></a></li>
+                                        <li><a href="#">Farmasi &nbsp;<span class="item-numbers">(242)</span></a></li>
+                                        <li><a href="#">Komunikasi dan Informatika &nbsp;<span class="item-numbers">(2,342)</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="banner-widget">
+                                <img src="http://placehold.it/600x275" alt="banner" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+{% endblock %}
+

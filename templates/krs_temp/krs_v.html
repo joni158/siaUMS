@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <title>Welcome | Sistem Akademik UMS</title>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            
+          {% include 'navbar.html' %}
+
+          <section class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3">                           
+
+                      {% include 'sidebar.html' %}
+
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+
+                      <!-- Content Wrapper. Contains page content -->
+                      <div class="content-wrapper">
+                        <!-- Content Header (Page header) -->
+                        <section class="content-header">
+                          <h2>
+                            Data Diri
+                          </h2>
+                          <ol class="breadcrumb">
+                            <li><a href="#"><i class="fa fa-user"></i> {{ title }}</a></li>
+                            <li class="active">Sistem Akademik Universitas Muhammadiyah Surakarta</li>
+                          </ol>
+                        </section>
+
+                        <!-- Main content -->
+                        <section class="content">
+                            
+                          <table class="table" border="0">
+                            <theaad>
+                              <th>Nomor</th>
+                              <th>Nama Mata Kuliah</th>
+                              <th>Semester</th>
+                              <th>Jumlah SKS</th>
+                              <th>Kelas</th>
+                            </thead>
+                            <tbody>
+
+                              <form action="/simpan_krs/" method="post">{% csrf_token %}
+                                <input type="hidden" name="id_mhs" value="{{ data_diri.id_mhs }}">
+
+                                {% for mk in matkul %}
+                                  <tr>
+                                    <td>Nomor</td>
+                                    <td>Nomor Induk Mahasiswa</td>
+                                    <td>Nomor Induk Mahasiswa</td>
+                                    <td>Nomor Induk Mahasiswa</td>
+                                    <td>Nomor Induk Mahasiswa</td>
+                                  </tr>
+                                {% endfor %}
+
+                              </form>
+
+                            </tbody>
+                          </table>
+
+                        </section><!-- /.content -->
+                      </div><!-- /.content-wrapper -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </div>
+    </div>
+
+{% endblock %}
+

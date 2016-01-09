@@ -1,0 +1,63 @@
+{% load staticfiles %}
+
+            <header class="navbar navbar-default navbar-fixed-top navbar-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="{% url 'login' %}" class="navbar-brand"><span class="logo">
+                            <img src="{% static 'uploads/logo/logo2.png' %}" width="300" height="60" />
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            {% if request.user.is_authenticated %}
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-user"></i> {{ request.user }} <strong class="caret"></strong>&nbsp;</a>
+                                    <div class="dropdown-menu menu-logout" style="padding:10px;">
+                                        <a href="/logout">Logout</a>
+                                    </div>
+                                </li>
+
+                            {% else %}
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-user"></i> Sign In <strong class="caret"></strong>&nbsp;</a>
+                                    <div class="dropdown-menu dropdown-login" style="padding:15px;min-width:250px">
+                                        <form action="/auth/" method="post">{% csrf_token %}                       
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon addon-login"><i class="fa fa-user"></i></span>
+                                                    <input type="text" name="username" value="" id="username" placeholder="NIM/ NIK/ Uni ID" required="required" class="form-control input-login">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon addon-login"><i class="addon fa fa-lock"></i></span>
+                                                    <input type="password" name="password" value="" id="password" placeholder="Password" required="required" class="form-control input-login">                                            
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="checkbox">
+                                                    <label class="string optional" for="user_remember_me">
+                                                        <input type="checkbox" id="user_remember_me" style="">
+                                                        Remember me
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <input type="submit" class="btn btn-custom btn-block" value="Sign In">
+                                            <a href="forgot_password.html" class="btn-block text-center">Forgot password?</a>
+                                        </form>                                    
+                                    </div>
+                                </li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+                </div>
+            </header>
